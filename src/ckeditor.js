@@ -162,9 +162,7 @@ ClassicEditor.defaultConfig = {
 		showPreviews: true
 	},
 	sanitizeHtml: (inputHtml) => {
-		console.log("input---->",inputHtml);
 		const outputHtml = sanitizeHtml(inputHtml);
-		console.log("output----->",outputHtml);
 		return {
 			html: outputHtml,
 			hasChanged: true
