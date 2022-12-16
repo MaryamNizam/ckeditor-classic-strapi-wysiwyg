@@ -161,6 +161,15 @@ ClassicEditor.defaultConfig = {
 	htmlEmbed: {
 		showPreviews: true
 	},
+	sanitizeHtml: (inputHtml) => {
+		console.log("input---->",inputHtml);
+		const outputHtml = sanitizeHtml(inputHtml);
+		console.log("output----->",outputHtml);
+		return {
+			html: outputHtml,
+			hasChanged: true
+		};
+	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
